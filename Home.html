@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="Home.html"><img src="imagem/core.png" class="core2">Home</a></li>               
+            <li><a href="Historia.html"><img src="imagem/core.png" class="core2">História</a>
+                <ul>
+                    <li><a href="Fotos.html"><img src="imagem/core.png" class="core2">Fotos</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Festa.html"><img src="imagem/core.png" class="core2">Festa</a>
+                <ul>
+                <li><a href="Local.html"><img src="imagem/core.png" class="core2">Local</a></li>
+                <li><a href="Presença.html"><img src="imagem/core.png" class="core2">Presença</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Presentes.html"><img src="imagem/core.png" class="core2">Presentes</a></li> 
+            
+        </ul>   
+             
+    </nav>
+
+    <div id="tempo">
+		<div class="timer" id="dias" style="background-color: red;"></div> 
+        <div class="timer" id="horas" style="background-color: green;"></div>
+        <div class="timer" id="minutos" style="background-color: blue"></div>
+       	<div class="timer" id="segundos" style="background-color: yellow;"></div>
+        
+        <div ><p class="identFon">Dia(s)</p></div>
+        <div ><p class="identFon">Hora(s)</p></div>
+        <div ><p class="identFon">Minuto(s)</p></div>
+        <div ><p class="identFon">Segundo(s)</p></div><img src="imagem/bomba.gif" width="145px" class="core" style="margin: -56px">
+    </div>
+
+   <center><img src="imagem/jogo.png" style="margin-top: 70px"></center><p class="bemv">SEJAM BEM-VINDOS</p>
+   <h1 class="bemvi">ao nosso site</h1>
+   <p class="bemvi">Falta pouco para o grande dia, aproveita para conhecer um pouco sobre nós.</p>
+   <center><img src="imagem/jogo2.png"></center>
+   
+
+    
+</body>
+    <script>
+        var dataFutura = new Date("October 31 2022 19:00").getTime();
+        var dias, horas, minutos, segundos;
+    
+        function setValores(e){
+            return document.getElementById(e)
+        }
+    
+        setInterval(function(){
+            var dataAtual= new Date().getTime();
+            var segundosTotal=(dataFutura-dataAtual)/1000;
+           
+            dias=parseInt(segundosTotal/86400);
+            segundosTotal=segundosTotal%86400;
+    
+            horas=parseInt(segundosTotal/3600);
+            segundosTotal=segundosTotal%3600;
+    
+            minutos=parseInt(segundosTotal/60);
+            segundos=parseInt(segundosTotal%60);
+    
+            setValores("dias").innerHTML=dias;
+            setValores("horas").innerHTML=horas;
+            setValores("minutos").innerHTML=minutos;   
+            setValores("segundos").innerHTML=segundos;    
+    
+        },1000)
+    
+       ;
+        
+    </script>
+</html>

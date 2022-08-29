@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="Home.html"><img src="imagem/core.png" class="core2">Home</a></li>               
+            <li><a href="Historia.html"><img src="imagem/core.png" class="core2">História</a>
+                <ul>
+                    <li><a href="Fotos.html"><img src="imagem/core.png" class="core2">Fotos</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Festa.html"><img src="imagem/core.png" class="core2">Festa</a>
+                <ul>
+                <li><a href="Local.html"><img src="imagem/core.png" class="core2">Local</a></li>
+                <li><a href="Presença.html"><img src="imagem/core.png" class="core2">Presença</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Presentes.html"><img src="imagem/core.png" class="core2">Presentes</a></li> 
+            
+        </ul>   
+             
+    </nav>
+
+    <div id="tempo">
+		<div class="timer" id="dias" style="background-color: red;"></div> 
+        <div class="timer" id="horas" style="background-color: green;"></div>
+        <div class="timer" id="minutos" style="background-color: blue"></div>
+       	<div class="timer" id="segundos" style="background-color: yellow;"></div>
+        
+        <div ><p class="identFon">Dia(s)</p></div>
+        <div ><p class="identFon">Hora(s)</p></div>
+        <div ><p class="identFon">Minuto(s)</p></div>
+        <div ><p class="identFon">Segundo(s)</p></div><img src="imagem/bomba.gif" width="145px" class="core" style="margin: -56px">
+    </div>
+
+    <header class="hist">
+        <h1 class="texthis">História</h1>
+        <h1 class="bord"></h1>
+
+        <p class="verso" id="destaque" style="margin:10px">"Por essa razão, o homem deixará pai e mãe e se unirá à sua mulher, e eles se tornarão uma só carne."
+            <br> "Gênisis 2.24"</p>
+
+        <p class="histp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, dignissim et pretium vitae, semper et lectus. Donec eu quam nisl. Integer in massa consequat, lacinia quam vel, faucibus purus. Aenean hendrerit pharetra porta. Sed varius molestie eleifend. Integer at dolor ante. Aenean efficitur imperdiet dui, quis sodales leo varius id. Vivamus congue faucibus fermentum.
+
+            Nullam pretium lobortis pretium. Morbi ultrices pulvinar bibendum. Ut commodo a augue sed malesuada. Donec imperdiet lacus imperdiet, vehicula justo in, mollis diam. Cras vehicula congue lorem, at facilisis justo tempor eu. Sed id lectus cursus, suscipit erat convallis, ultrices magna. Nam vel leo id enim condimentum tempor et vitae ante. Curabitur sit amet volutpat quam. Aenean consectetur maximus tortor, vitae scelerisque quam molestie nec. Ut fermentum sed augue nec consectetur. Phasellus ac maximus ante, a laoreet urna. Morbi vestibulum rutrum erat, vitae molestie neque venenatis sed.
+            
+            Fusce sit amet sem nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse felis quam, congue nec odio id, iaculis aliquet orci. Morbi malesuada sit amet nunc ac vehicula. Pellentesque justo nulla, venenatis vitae eleifend vitae, suscipit sed nulla. Pellentesque aliquam mauris at ligula porttitor, vel vestibulum augue condimentum. Nunc est nisi, aliquam vel nisl dictum, commodo bibendum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dui augue, lacinia ut elit in, maximus vestibulum velit. Praesent ante mauris, congue nec imperdiet sit amet, rutrum ac velit.
+        <br>
+        <br>   
+            Nullam luctus ultricies purus, non pretium lectus volutpat eget. Donec tempus est et ex vestibulum sollicitudin. Integer ac ultricies ipsum, eu sagittis lorem. Aenean consequat vulputate auctor. Ut aliquet ex sit amet interdum pharetra. Maecenas fermentum arcu id commodo pharetra. Maecenas aliquet sapien at vestibulum mollis. Praesent tristique dolor vel odio tincidunt, eget tincidunt erat varius.
+            
+            Nam imperdiet ornare orci vitae auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam eu magna ligula. In bibendum velit ut sem volutpat, at dictum diam fermentum. Nunc sem massa, faucibus in sapien consectetur, placerat rhoncus massa. Phasellus aliquet sapien ac massa ornare, eu viverra dui lacinia. Duis nec lectus dui. In iaculis, orci in venenatis facilisis, odio urna fermentum justo, sit amet pulvinar velit ligula fermentum ante. Aenean est nisl, euismod in justo id, porta tincidunt nibh. Cras cursus dictum commodo. Donec id finibus tortor, dapibus placerat tortor. 
+            <span id="destaque">"Mauris vel nunc sit amet dui interdum suscipit. Praesent placerat hendrerit felis vel rhoncus. Nullam sodales varius lacus nec cursus".</span</p>
+    </header>
+    
+    <center><img src="imagem/jogo2.png"></center>
+
+    
+</body>
+    <script>
+        var dataFutura = new Date("October 31 2022 19:00").getTime();
+        var dias, horas, minutos, segundos;
+    
+        function setValores(e){
+            return document.getElementById(e)
+        }
+    
+        setInterval(function(){
+            var dataAtual= new Date().getTime();
+            var segundosTotal=(dataFutura-dataAtual)/1000;
+           
+            dias=parseInt(segundosTotal/86400);
+            segundosTotal=segundosTotal%86400;
+    
+            horas=parseInt(segundosTotal/3600);
+            segundosTotal=segundosTotal%3600;
+    
+            minutos=parseInt(segundosTotal/60);
+            segundos=parseInt(segundosTotal%60);
+    
+            setValores("dias").innerHTML=dias;
+            setValores("horas").innerHTML=horas;
+            setValores("minutos").innerHTML=minutos;   
+            setValores("segundos").innerHTML=segundos;    
+    
+        },1000)
+    
+       ;
+        
+    </script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="Home.html"><img src="imagem/core.png" class="core2">Home</a></li>               
+            <li><a href="Historia.html"><img src="imagem/core.png" class="core2">História</a>
+                <ul>
+                    <li><a href="Fotos.html"><img src="imagem/core.png" class="core2">Fotos</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Festa.html"><img src="imagem/core.png" class="core2">Festa</a>
+                <ul>
+                <li><a href="Local.html"><img src="imagem/core.png" class="core2">Local</a></li>
+                <li><a href="Presença.html"><img src="imagem/core.png" class="core2">Presença</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Presentes.html"><img src="imagem/core.png" class="core2">Presentes</a></li> 
+            
+        </ul>   
+             
+    </nav>
+    <div id="tempo">
+		<div class="timer" id="dias" style="background-color: red;"></div> 
+        <div class="timer" id="horas" style="background-color: green;"></div>
+        <div class="timer" id="minutos" style="background-color: blue"></div>
+       	<div class="timer" id="segundos" style="background-color: yellow;"></div>
+        
+        <div ><p class="identFon">Dia(s)</p></div>
+        <div ><p class="identFon">Hora(s)</p></div>
+        <div ><p class="identFon">Minuto(s)</p></div>
+        <div ><p class="identFon">Segundo(s)</p></div><img src="imagem/bomba.gif" width="145px" class="core" style="margin: -56px">
+    </div>
+
+    <div class="box">
+		<form action="">
+			<fieldset>
+				<legend><b>Confirme Presença</b></legend>
+				<br>
+				<div class="inputBox">
+					<input type="text" name="nome" id="nome" class="inputUser" required>
+					<label for="nome" class="labelInput">Nome Completo</label>
+				</div>
+				<br><br>
+				<div class="inputBox">
+					<input type="text" name="email" id="email" class="inputUser" required>
+					<label for="email" class="labelInput">Email</label>
+				</div>
+				<br><br>
+				<div class="inputBox">
+					<input type="tel" name="telefone" id="telefone" class="inputUser" required>
+					<label for="telefone" class="labelInput">Telefone</label>
+				</div>
+				<br>
+				<p id="fonte">Sexo:</p>
+				<input type="radio"  name="sexo" id="feminino" value="feminino" required checked>
+				<label for="feminino" id="fonte">Feminino</label>
+				<input type="radio" name="sexo" id="masculino" value="masculino" required>
+				<label for="masculino" id="fonte">Masculino</label>
+				<br><br>
+				<label for="data_nasc" id="fonte">Data de Nascimento:</label>
+				<input type="date" name="data_nasc" id="data_nasc" required>
+				<br><br>
+				<label id="fonte">Confime sua presença</label>
+                <input type="checkbox"  name="presença" required checked>
+				<label for="feminino" id="fonte">SIM</label>
+				<input type="checkbox" name="presença" >
+				<label for="masculino" id="fonte">NÃO</label>
+                <br><br>
+                <label for= "quantidade" name="quantidade" id="fonte">Quantas pessoas?</label>
+                <select class="pessoas">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                </select>
+                <br>
+				<input type="submit" id="submit">
+
+			</fieldset>
+		</form>
+		
+	  </div>  
+     
+</body>
+    <script>
+        var dataFutura = new Date("October 31 2022 19:00").getTime();
+        var dias, horas, minutos, segundos;
+    
+        function setValores(e){
+            return document.getElementById(e)
+        }
+    
+        setInterval(function(){
+            var dataAtual= new Date().getTime();
+            var segundosTotal=(dataFutura-dataAtual)/1000;
+           
+            dias=parseInt(segundosTotal/86400);
+            segundosTotal=segundosTotal%86400;
+    
+            horas=parseInt(segundosTotal/3600);
+            segundosTotal=segundosTotal%3600;
+    
+            minutos=parseInt(segundosTotal/60);
+            segundos=parseInt(segundosTotal%60);
+    
+            setValores("dias").innerHTML=dias;
+            setValores("horas").innerHTML=horas;
+            setValores("minutos").innerHTML=minutos;   
+            setValores("segundos").innerHTML=segundos;    
+    
+        },1000)
+    
+       ;
+    </script>
+</html>   
+ 

@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+
+body{
+    display: grid;   
+    background-image: linear-gradient(100deg,rgba(63, 63, 63, 0.575), rgba(9, 145, 111, 0.884));
+}
+/*barra de navegação*/
+
+/*decoração da barra de navegação*/
+.dp-menu ul{
+    list-style-type: none;/*tirar os pontos*/
+    padding: 0px; 
+    border-radius: 5px;  
+    box-shadow: 5px 5px 5px;
+    margin: 2px;
+}
+/*cor da barra*/
+.dp-menu ul{
+   background-color: rgba(205, 134, 63, 0.884);
+}
+
+/*deixa as UL's e LI's alinhadas*/
+.dp-menu ul li{
+    display: inline;
+    position: relative;
+}
+
+/*decoração dos nomes*/
+.dp-menu ul li a{
+    color: #fff;
+    text-decoration: none;/*tirar o sublinhado ou outra decoração*/
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: #161616;
+}
+
+/*ao passar o mouse muda a cor da letra*/
+.dp-menu ul li a:hover{
+    background-color:rgba(134, 131, 131, 0.534);
+    cursor: pointer;  
+    border: 1px dotted;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #161616;
+}
+
+.dp-menu ul li a:active{
+    box-shadow: 0 0 0 0 #161616, inset 3px 3px 3px;
+}
+
+/*SUBMENU*/
+/*deixa as UL's alinhadas*/
+.dp-menu ul ul {
+    display: none;
+    left: 1px;
+    position: absolute;
+}
+
+/*faz com que a LI desça ao passar o mouse*/
+.dp-menu ul li:hover ul {
+    display: block;
+}
+
+/*decoração do quadrado da 2 UL*/
+.dp-menu ul ul {
+    width: 128px;
+}
+
+.dp-menu ul ul li a{
+    display: block;
+}
+
+/*CONTAGEM REGRESSIVA*/
+.identFon{
+    text-align: center;
+    margin: 3px;
+    padding: 8px;
+    float: left;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 6px;
+    }    
+    
+    #tempo{
+        position: relative;
+        width: 300px;
+        top:125%;
+        left: 80%;
+        transform: translate(-50%,-50% );
+    }
+    
+    @keyframes timer{
+    
+        from{border-radius: 10px;}
+        to {}
+    }
+
+    .timer{
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 3px;
+        text-align: center;
+        padding-top: 12px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        box-shadow: 5px 5px 2px gray;
+        border: 2px solid white;
+        font-size: 30px;
+        font-family: 'Black Ops One', cursive;    
+    }
+
+    /*BEM-VINDOS*/
+    .bemv{       
+        font-size: 25px;
+        text-shadow: 2px 4px 1px rgb(156, 39, 39);
+        color: yellow;
+        font-family: 'Press Start 2P', cursive;
+        text-align: center;
+    }
+    .bemvi{
+               
+        font-size: 10px;
+        font-family: 'Press Start 2P', cursive;
+        text-align: center;
+    }
+
+
+    /*coração ao lado do menu*/
+    .core2{
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    /*como fazer slides*/
+    .content{
+        height: 580px;
+        width: 500px;
+        border: dotted 2px;
+        border-radius: 5px;
+        overflow: hidden;/*como sumir com as imagens*/
+        position: relative;
+        top:50%;
+        left: 48%;
+        transform: translate(-50%,-50% );
+        box-shadow: 2px 2px 2px;
+    }
+
+    .navigation{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;   
+     }
+
+
+     .bar{
+        width: 15px;
+        height: 12px;
+        background-color: blue;
+        margin: 2px;
+        border: dotted 2px;
+        border-radius: 1px;
+        box-shadow: 1px 1px 1px;
+        cursor: pointer;
+        transition: .4s;
+     }
+
+     .bar:active{
+        box-shadow: 0 0 0 0 #161616, inset 3px 3px 3px;
+     }
+
+     .inputy{
+        display: none;
+     }
+
+     .slides{
+        display: flex;
+        width: 1700%;
+        height: 100%;
+     }
+
+     .slide{
+        width: 6%;
+        transition: .6s;       
+     }
+
+     /*deixando a imagem 100% a mostra*/
+     .slide img{
+        width: 100%;
+        height: 100%;
+     }
+
+     /*movendo as imagens*/
+     #slide1:checked ~ .s1{
+        margin-left: 0;
+     }
+     #slide2:checked ~ .s1{
+        margin-left: -6%;
+     }
+     #slide3:checked ~ .s1{
+        margin-left: -12%;
+     }
+     #slide4:checked ~ .s1{
+        margin-left: -18%;
+     }
+     #slide5:checked ~ .s1{
+        margin-left: -24%;
+     }
+     #slide6:checked ~ .s1{
+        margin-left: -30%;
+     } 
+     #slide7:checked ~ .s1{
+        margin-left: -36%;
+     } 
+     #slide8:checked ~ .s1{
+        margin-left: -42%;
+     } 
+     #slide9:checked ~ .s1{
+        margin-left: -48%;
+     } 
+     #slide10:checked ~ .s1{
+        margin-left: -54%;
+     } 
+     #slide11:checked ~ .s1{
+        margin-left: -60%;
+     } 
+     #slide12:checked ~ .s1{
+        margin-left: -66%;
+     } 
+     #slide13:checked ~ .s1{
+        margin-left: -72%;
+     } 
+     #slide14:checked ~ .s1{
+        margin-left: -78%;
+     } 
+     #slide15:checked ~ .s1{
+        margin-left: -84%;
+     } 
+     #slide16:checked ~ .s1{
+        margin-left: -90%;
+     } 
+     #slide17:checked ~ .s1{
+        margin-left: -96%;
+     }
+
+     /*HISTORIA*/
+
+     .hist{ 
+      text-align: center;
+      margin-top: 70px;      
+     }
+
+     .texthis{      
+      font-size: 40px;      
+      font-family: 'Press Start 2P', cursive;
+      text-shadow: 1px 2px 2px #fff;
+     }
+
+     .verso{
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 35px;
+      
+     }
+
+     .bord{
+      border: 2px dotted;
+      margin: 300px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+     }
+
+     .histp {     
+      font-size: 15px;
+      font-family: 'Roboto Slab', serif;
+      text-align:center;
+      margin: 10px;
+      padding: 10px;      
+     }
+
+     #destaque{
+      background-color: rgba(205, 134, 63, 0.884);
+      border-radius: 3px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 25px;
+     }
+
+     /*FESTA*/
+
+     .festa{
+      font-family: 'Press Start 2P', cursive;
+      font-size: 20px;
+     }
+
+     .naveg{
+      font-size: 20px;
+      font-family: 'Roboto Slab', serif;
+     }
+
+     .lopre{
+      background-color: rgba(205, 134, 63, 0.884);
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 1px 2px 2px;
+     }
+
+    .lopre:hover{
+      cursor: pointer;
+      box-shadow: 0 0 0 0 #161616, inset 3px 3px 3px;
+   }
+
+   /*logos tamanhos*/
+     .posi{
+      margin-top: 100px;
+      text-align: center;      
+     }
+
+     .logo{      
+      padding: 10px;
+      margin: 10px;
+      font-size: 17px;      
+      font-family: 'Press Start 2P', cursive;
+      text-shadow: 1px 2px 2px #fff;
+     }  
+
+     
+
+    a{
+      text-decoration: none;
+    }
+
+      /*PRESENÇA*/
+
+      .box{     
+         position: relative;
+         top:70%;
+         left:50%;
+         transform: translate(-50%,-50% ); 
+         border-radius: 5px;
+         padding: 15px;
+         width: 450px;         
+      }
+
+      fieldset{
+         border: 2px dotted;
+         border-radius: 6px;
+         padding: 10px;
+      }
+
+      legend{
+         border: 2px dotted;
+         padding: 10px 60px;
+         text-align: center;
+         border-radius: 5px;
+         font-family: 'Press Start 2P', cursive;
+         font-size: 12px;
+         text-shadow: 1px 2px 3px #fff;
+      }
+
+      .inputBox{
+         position: relative;
+      }
+
+      .inputUser{
+         /*tirar as decorações das coisas colocar NONE depois do que quer tirar*/
+         background: none;
+         border: none;
+         border-bottom: 2px dotted;
+         /*tirar a linha da borda*/
+         outline: none;
+         font-size: 12px;
+         width: 100%;
+         /*aumentar o espaço entre as letras*/
+         letter-spacing: 2px;
+      }
+
+      .labelInput{
+         position: absolute;
+         top:0;
+         left: 0;
+        /*qualquer lugar que clicar funciona*/
+         pointer-events: none;
+         transition: .5s;
+         font-family: 'Roboto Slab', serif;
+         font-size: 12px;
+      }
+
+      /*animação dos espaços a preencher*/
+      .inputUser:focus ~ .labelInput,
+      .inputUser:valid ~ .labelInput{
+         top: 20px;
+         font-size: 12px;
+         font-family: 'Roboto Slab', serif;
+      }
+
+      /*data de nascimento*/
+
+      #fonte{
+         font-size: 12px;
+         font-family: 'Roboto Slab', serif;
+      }
+
+      #data_nasc{
+         border: 2px solid;
+         border-radius: 5px;
+         box-shadow: 5px 5px 5px;
+         background-color: #088a67a1;
+         padding: 8px;
+         font-size: 12px;
+         font-family: 'Roboto Slab', serif;
+
+      }
+
+      /*BOTAO ENVIAR*/
+      #submit{
+         width: 100%;
+         height: 50px;
+         font-family: 'Press Start 2P', cursive;        
+         background-color:#088a67a1;
+         box-shadow: 5px 5px 5px;
+         border-radius: 5px;
+         border: 2px solid;
+         text-shadow: 1px 2px 2px gray;
+      }
+
+      #submit:hover{
+         cursor: pointer;
+         box-shadow: 0 0 0 0 #161616, inset 3px 3px 3px;
+      }
+
+      /*forms*/
+      .pessoas{
+         border: 2px solid;
+         border-radius: 5px;
+         box-shadow: 5px 5px 5px;
+         background-color: #088a67a1;
+         padding: 2px;
+         margin: 2px;
+         font-size: 12px;
+         font-family: 'Roboto Slab', serif;
+      }
+
+  
+
+
+     
+
+
+
+
+
+
+
+    
